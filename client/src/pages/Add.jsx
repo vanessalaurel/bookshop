@@ -19,7 +19,9 @@ const Add = () => {
   };
 
   const handleClick = async (e) => {
-    e.preventDefault();
+    e.preventDefault();//e.preventDefault() is a method used in JavaScript to stop the default action of an event from occurring. 
+    //In React, it's often used in event handlers, particularly for form submissions, 
+    //where it prevents the browser's default behavior of refreshing the page or navigating away when a form is submitted.
     try {
       await axios.post("http://localhost:8800/books", book);
       navigate("/");
